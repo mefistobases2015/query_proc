@@ -15,6 +15,72 @@ options { language = Java; }
 /* Inicio del programa */
 programa
 	: clp_commands
+	| ddl_commands
+	;
+	
+/* Comandos DDL */ 
+ddl_commands
+	: (set_db
+	| create_index
+	| drop_table
+	| alter_table
+	| create_table) ddl_commands
+	| /* ε */
+	;
+	
+/* Fija el esquema actual */	
+set_db
+	: SET DATABASE ID
+	;
+
+/* Crea un índice sobre una columna distinta a la llave primaria */	
+create_index
+	: CREATE INDEX ID ON NEWLINE? ID LEFT_PAR ID RIGHT_PAR
+	;
+
+/* Elimina una tabla */	
+drop_table
+	: DROP TABLE ID
+	;
+	
+/* Establece integridad referencial sobre una columna */	
+alter_table
+	: ALTER TABLE ID NEWLINE? ADD CONSTRAINT const_def
+	;
+	
+const_def
+	: FOREIGN KEY LEFT_PAR ID RIGHT_PAR NEWLINE? REFERENCES ID LEFT_PAR ID RIGHT_PAR
+	;
+	
+/* Crea una tabla */	
+create_table
+	: CREATE TABLE ID AS LEFT_PAR NEWLINE? col_def p_key RIGHT_PAR
+	;
+	
+/* Definición de columnas */	
+col_def
+	: ID type null_cons NEWLINE? col_def
+	| /* ε */
+	;
+	
+/* Tipos de datos */	
+type
+	: INTEGER
+	| DECIMAL LEFT_PAR INT COLON INT RIGHT_PAR
+	| CHARACTER LEFT_PAR INT RIGHT_PAR
+	| VARCHAR
+	| DATETIME
+	;
+	
+/* Restricción de NULL */	
+null_cons
+	: NULL
+	| NOT NULL
+	;
+	
+/* Llave primaria */	
+p_key
+	: PRIMARY KEY LEFT_PAR ID RIGHT_PAR NEWLINE?
 	;
 
 /* Comandos CLP */ 
@@ -116,6 +182,113 @@ DISPLAY
 	
 NEWLINE
 	: '\n'
+	;
+	
+SET
+	: 'SET'
+	| 'set'
+	;
+	
+INDEX
+	: 'INDEX'
+	| 'index'
+	;
+	
+ON
+	: 'ON'
+	| 'on'
+	;
+	
+TABLE
+	: 'TABLE'
+	| 'table'
+	;
+	
+ALTER
+	: 'ALTER'
+	| 'alter'
+	;
+	
+ADD
+	: 'ADD'
+	| 'add'
+	;
+	
+CONSTRAINT
+	: 'CONSTRAINT'
+	| 'constraint'
+	;
+	
+FOREIGN
+	: 'FOREIGN'
+	| 'foreign'
+	;
+	
+KEY
+	: 'KEY'
+	| 'key'
+	;
+	
+REFERENCES
+	: 'REFERENCES'
+	| 'references'
+	;
+	
+AS
+	: 'AS'
+	| 'as'
+	;
+	
+INTEGER
+	: 'INTEGER'
+	| 'integer'
+	;
+	
+DECIMAL
+	: 'DECIMAL'
+	| 'decimal'
+	;
+	
+LEFT_PAR
+	: '('
+	;
+	
+COLON
+	: ','
+	;
+	
+RIGHT_PAR
+	: ')'
+	;
+	
+CHARACTER
+	: 'CHAR'
+	| 'char'
+	;
+	
+VARCHAR
+	: 'VARCHAR'
+	| 'varchar'
+	;
+	
+DATETIME
+	: 'DATETIME'
+	| 'datetime'
+	;
+	
+NULL
+	: 'NULL'
+	| 'null'
+	;
+	
+NOT
+	: 'NOT'
+	| 'not'
+	;
+	
+PRIMARY
+	: 'PRIMARY'
+	| 'primary'
 	;
 
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
