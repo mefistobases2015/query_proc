@@ -12,6 +12,22 @@ options { language = Java; }
 	import java.io.*;
 }
 
+@members {
+	public void displayRecognitionError(String[] tokenNames, RecognitionException e) {
+		String hdr = getErrorHeader(e);
+		String[] splt = hdr.split("\\s");
+		String tmp = splt[1];
+		char c = tmp.charAt(0);
+		String lineNumber = "";
+		lineNumber += Character.toString(c);
+		c = tmp.charAt(1);
+		if (!Character.toString(c).equals(":")) {
+			lineNumber += Character.toString(c);
+		}
+		System.out.println("Error 42000: Syntax error or access rule violation in line " + lineNumber);
+	}
+}
+
 /* Inicio del programa */
 programa
 	: clp_commands
@@ -40,7 +56,7 @@ col_list
 	;
 	
 from
-	: FROM ( ID | join_st ) NEWLINE? where? NEWLINE? group? NEWLINE? for?
+	: FROM ( ID | join_st ) NEWLINE? where? NEWLINE? group? NEWLINE? for_JSON_XML?
 	;
 	
 join_st
@@ -84,7 +100,7 @@ cols
 	|
 	;
 	
-for
+for_JSON_XML
 	: FOR ( JSON | XML )
 	;
 	
