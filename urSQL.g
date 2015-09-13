@@ -299,7 +299,7 @@ create_table
 	 {
 	 	Collections.reverse($programa::column);
 	 	int j = 0;
-	 	for(int k = 0; k < $programa::type_null.size(); k += 4) {
+	 	for (int k = 0; k < $programa::type_null.size(); k += 4) {
 	 		Vector<String> v = new Vector<String>();
 	 		v.add($programa::column.get(j));
 	 		v.add($programa::type_null.get(k));
@@ -309,12 +309,29 @@ create_table
 	 		$programa::columns.add(v);
 	 		j++;
 	 	}
-	 	System.out.println("Table: " + $ID.text);
-	 	System.out.println("Columns:");
-	 	for(int i = 0; i < $programa::columns.size(); i++) {
-	 		System.out.println($programa::columns.get(i));
+		boolean pk = false;
+		boolean pk_exists = false;
+		for (int i = 0; i < $programa::columns.size(); i++) {
+			Vector<String> v = $programa::columns.get(i);
+			if (v.get(0).equals($programa::tmp)) {
+				pk_exists = true;
+				if (v.get(4).equals("1")) {
+					pk = true;
+				}
+			}
+		}
+		if (!pk_exists) {
+			System.out.println("Error: Primary key is not a valid column");
+		} else if (pk) {
+			System.out.println("Error: Primary key can't be null");
+		} else {
+	 		System.out.println("Table: " + $ID.text);
+	 		System.out.println("Columns:");
+	 		for(int i = 0; i < $programa::columns.size(); i++) {
+	 			System.out.println($programa::columns.get(i));
+	 		}
+	 		System.out.println("Primary key: " + $programa::tmp);
 	 	}
-	 	System.out.println("Primary key: " + $programa::tmp);
 	 	$programa::column.clear();
 	 	$programa::type_null.clear();
 	 	$programa::columns.clear();
