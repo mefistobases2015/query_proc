@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g 2015-09-13 00:56:39
+// $ANTLR 3.5 /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g 2015-09-13 17:39:18
 
 	package query_processor;
 	import java.io.*;
@@ -104,7 +104,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = SELECT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:469:2: ( 'SELECT' | 'select' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:486:2: ( 'SELECT' | 'select' )
 			int alt1=2;
 			int LA1_0 = input.LA(1);
 			if ( (LA1_0=='S') ) {
@@ -122,14 +122,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt1) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:469:4: 'SELECT'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:486:4: 'SELECT'
 					{
 					match("SELECT"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:470:4: 'select'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:487:4: 'select'
 					{
 					match("select"); 
 
@@ -151,8 +151,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = ALL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:474:2: ( '*' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:474:4: '*'
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:491:2: ( '*' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:491:4: '*'
 			{
 			match('*'); 
 			}
@@ -171,7 +171,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = FROM;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:478:2: ( 'FROM' | 'from' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:495:2: ( 'FROM' | 'from' )
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0=='F') ) {
@@ -189,14 +189,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt2) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:478:4: 'FROM'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:495:4: 'FROM'
 					{
 					match("FROM"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:479:4: 'from'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:496:4: 'from'
 					{
 					match("from"); 
 
@@ -218,7 +218,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = JOIN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:483:2: ( 'JOIN' | 'join' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:500:2: ( 'JOIN' | 'join' )
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0=='J') ) {
@@ -236,14 +236,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt3) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:483:4: 'JOIN'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:500:4: 'JOIN'
 					{
 					match("JOIN"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:484:4: 'join'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:501:4: 'join'
 					{
 					match("join"); 
 
@@ -265,7 +265,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = WHERE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:488:2: ( 'WHERE' | 'where' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:505:2: ( 'WHERE' | 'where' )
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='W') ) {
@@ -283,14 +283,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt4) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:488:4: 'WHERE'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:505:4: 'WHERE'
 					{
 					match("WHERE"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:489:4: 'where'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:506:4: 'where'
 					{
 					match("where"); 
 
@@ -312,8 +312,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = GREATER_THAN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:493:2: ( '>' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:493:4: '>'
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:510:2: ( '>' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:510:4: '>'
 			{
 			match('>'); 
 			}
@@ -332,8 +332,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = GREATER_EQUALS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:497:2: ( '>=' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:497:4: '>='
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:514:2: ( '>=' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:514:4: '>='
 			{
 			match(">="); 
 
@@ -353,8 +353,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = LESS_THAN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:501:2: ( '<' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:501:4: '<'
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:518:2: ( '<' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:518:4: '<'
 			{
 			match('<'); 
 			}
@@ -373,8 +373,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = LESS_EQUALS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:505:2: ( '<=' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:505:4: '<='
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:522:2: ( '<=' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:522:4: '<='
 			{
 			match("<="); 
 
@@ -394,8 +394,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = EQUALS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:509:2: ( '=' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:509:4: '='
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:526:2: ( '=' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:526:4: '='
 			{
 			match('='); 
 			}
@@ -414,7 +414,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = LIKE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:513:2: ( 'LIKE' | 'like' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:530:2: ( 'LIKE' | 'like' )
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='L') ) {
@@ -432,14 +432,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt5) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:513:4: 'LIKE'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:530:4: 'LIKE'
 					{
 					match("LIKE"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:514:4: 'like'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:531:4: 'like'
 					{
 					match("like"); 
 
@@ -461,7 +461,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = IS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:518:2: ( 'IS' | 'is' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:535:2: ( 'IS' | 'is' )
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0=='I') ) {
@@ -479,14 +479,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt6) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:518:4: 'IS'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:535:4: 'IS'
 					{
 					match("IS"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:519:4: 'is'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:536:4: 'is'
 					{
 					match("is"); 
 
@@ -508,7 +508,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = GROUP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:523:2: ( 'GROUP' | 'group' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:540:2: ( 'GROUP' | 'group' )
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0=='G') ) {
@@ -526,14 +526,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt7) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:523:4: 'GROUP'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:540:4: 'GROUP'
 					{
 					match("GROUP"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:524:4: 'group'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:541:4: 'group'
 					{
 					match("group"); 
 
@@ -555,7 +555,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = BY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:528:2: ( 'BY' | 'by' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:545:2: ( 'BY' | 'by' )
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0=='B') ) {
@@ -573,14 +573,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt8) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:528:4: 'BY'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:545:4: 'BY'
 					{
 					match("BY"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:529:4: 'by'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:546:4: 'by'
 					{
 					match("by"); 
 
@@ -602,7 +602,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:533:2: ( 'FOR' | 'for' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:550:2: ( 'FOR' | 'for' )
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='F') ) {
@@ -620,14 +620,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt9) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:533:4: 'FOR'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:550:4: 'FOR'
 					{
 					match("FOR"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:534:4: 'for'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:551:4: 'for'
 					{
 					match("for"); 
 
@@ -649,7 +649,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = JSON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:538:2: ( 'JSON' | 'json' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:555:2: ( 'JSON' | 'json' )
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0=='J') ) {
@@ -667,14 +667,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt10) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:538:4: 'JSON'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:555:4: 'JSON'
 					{
 					match("JSON"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:539:4: 'json'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:556:4: 'json'
 					{
 					match("json"); 
 
@@ -696,7 +696,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = XML;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:543:2: ( 'XML' | 'xml' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:560:2: ( 'XML' | 'xml' )
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0=='X') ) {
@@ -714,14 +714,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt11) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:543:4: 'XML'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:560:4: 'XML'
 					{
 					match("XML"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:544:4: 'xml'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:561:4: 'xml'
 					{
 					match("xml"); 
 
@@ -743,7 +743,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = COUNT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:548:2: ( 'COUNT' | 'count' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:565:2: ( 'COUNT' | 'count' )
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0=='C') ) {
@@ -761,14 +761,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt12) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:548:4: 'COUNT'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:565:4: 'COUNT'
 					{
 					match("COUNT"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:549:4: 'count'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:566:4: 'count'
 					{
 					match("count"); 
 
@@ -790,7 +790,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = AVERAGE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:553:2: ( 'AVERAGE' | 'average' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:570:2: ( 'AVERAGE' | 'average' )
 			int alt13=2;
 			int LA13_0 = input.LA(1);
 			if ( (LA13_0=='A') ) {
@@ -808,14 +808,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt13) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:553:4: 'AVERAGE'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:570:4: 'AVERAGE'
 					{
 					match("AVERAGE"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:554:4: 'average'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:571:4: 'average'
 					{
 					match("average"); 
 
@@ -837,7 +837,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = MIN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:558:2: ( 'MIN' | 'min' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:575:2: ( 'MIN' | 'min' )
 			int alt14=2;
 			int LA14_0 = input.LA(1);
 			if ( (LA14_0=='M') ) {
@@ -855,14 +855,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt14) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:558:4: 'MIN'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:575:4: 'MIN'
 					{
 					match("MIN"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:559:4: 'min'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:576:4: 'min'
 					{
 					match("min"); 
 
@@ -884,7 +884,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = MAX;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:563:2: ( 'MAX' | 'max' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:580:2: ( 'MAX' | 'max' )
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0=='M') ) {
@@ -902,14 +902,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt15) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:563:4: 'MAX'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:580:4: 'MAX'
 					{
 					match("MAX"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:564:4: 'max'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:581:4: 'max'
 					{
 					match("max"); 
 
@@ -931,7 +931,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = UPDATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:568:2: ( 'UPDATE' | 'update' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:585:2: ( 'UPDATE' | 'update' )
 			int alt16=2;
 			int LA16_0 = input.LA(1);
 			if ( (LA16_0=='U') ) {
@@ -949,14 +949,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt16) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:568:4: 'UPDATE'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:585:4: 'UPDATE'
 					{
 					match("UPDATE"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:569:4: 'update'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:586:4: 'update'
 					{
 					match("update"); 
 
@@ -978,7 +978,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = DELETE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:573:2: ( 'DELETE' | 'delete' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:590:2: ( 'DELETE' | 'delete' )
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0=='D') ) {
@@ -996,14 +996,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt17) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:573:4: 'DELETE'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:590:4: 'DELETE'
 					{
 					match("DELETE"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:574:4: 'delete'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:591:4: 'delete'
 					{
 					match("delete"); 
 
@@ -1025,7 +1025,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = INSERT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:578:2: ( 'INSERT' | 'insert' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:595:2: ( 'INSERT' | 'insert' )
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0=='I') ) {
@@ -1043,14 +1043,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt18) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:578:4: 'INSERT'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:595:4: 'INSERT'
 					{
 					match("INSERT"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:579:4: 'insert'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:596:4: 'insert'
 					{
 					match("insert"); 
 
@@ -1072,7 +1072,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = INTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:583:2: ( 'INTO' | 'into' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:600:2: ( 'INTO' | 'into' )
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0=='I') ) {
@@ -1090,14 +1090,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt19) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:583:4: 'INTO'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:600:4: 'INTO'
 					{
 					match("INTO"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:584:4: 'into'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:601:4: 'into'
 					{
 					match("into"); 
 
@@ -1119,7 +1119,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = VALUES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:588:2: ( 'VALUES' | 'values' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:605:2: ( 'VALUES' | 'values' )
 			int alt20=2;
 			int LA20_0 = input.LA(1);
 			if ( (LA20_0=='V') ) {
@@ -1137,14 +1137,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt20) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:588:4: 'VALUES'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:605:4: 'VALUES'
 					{
 					match("VALUES"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:589:4: 'values'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:606:4: 'values'
 					{
 					match("values"); 
 
@@ -1166,7 +1166,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = CREATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:593:2: ( 'CREATE' | 'create' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:610:2: ( 'CREATE' | 'create' )
 			int alt21=2;
 			int LA21_0 = input.LA(1);
 			if ( (LA21_0=='C') ) {
@@ -1184,14 +1184,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt21) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:593:4: 'CREATE'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:610:4: 'CREATE'
 					{
 					match("CREATE"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:594:4: 'create'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:611:4: 'create'
 					{
 					match("create"); 
 
@@ -1213,7 +1213,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = DATABASE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:598:2: ( 'DATABASE' | 'database' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:615:2: ( 'DATABASE' | 'database' )
 			int alt22=2;
 			int LA22_0 = input.LA(1);
 			if ( (LA22_0=='D') ) {
@@ -1231,14 +1231,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt22) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:598:4: 'DATABASE'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:615:4: 'DATABASE'
 					{
 					match("DATABASE"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:599:4: 'database'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:616:4: 'database'
 					{
 					match("database"); 
 
@@ -1260,7 +1260,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = DROP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:603:2: ( 'DROP' | 'drop' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:620:2: ( 'DROP' | 'drop' )
 			int alt23=2;
 			int LA23_0 = input.LA(1);
 			if ( (LA23_0=='D') ) {
@@ -1278,14 +1278,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt23) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:603:4: 'DROP'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:620:4: 'DROP'
 					{
 					match("DROP"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:604:4: 'drop'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:621:4: 'drop'
 					{
 					match("drop"); 
 
@@ -1307,7 +1307,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = LIST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:608:2: ( 'LIST' | 'list' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:625:2: ( 'LIST' | 'list' )
 			int alt24=2;
 			int LA24_0 = input.LA(1);
 			if ( (LA24_0=='L') ) {
@@ -1325,14 +1325,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt24) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:608:4: 'LIST'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:625:4: 'LIST'
 					{
 					match("LIST"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:609:4: 'list'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:626:4: 'list'
 					{
 					match("list"); 
 
@@ -1354,7 +1354,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = DATABASES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:613:2: ( 'DATABASES' | 'databases' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:630:2: ( 'DATABASES' | 'databases' )
 			int alt25=2;
 			int LA25_0 = input.LA(1);
 			if ( (LA25_0=='D') ) {
@@ -1372,14 +1372,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt25) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:613:4: 'DATABASES'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:630:4: 'DATABASES'
 					{
 					match("DATABASES"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:614:4: 'databases'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:631:4: 'databases'
 					{
 					match("databases"); 
 
@@ -1401,7 +1401,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = START;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:618:2: ( 'START' | 'start' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:635:2: ( 'START' | 'start' )
 			int alt26=2;
 			int LA26_0 = input.LA(1);
 			if ( (LA26_0=='S') ) {
@@ -1419,14 +1419,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt26) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:618:4: 'START'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:635:4: 'START'
 					{
 					match("START"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:619:4: 'start'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:636:4: 'start'
 					{
 					match("start"); 
 
@@ -1448,7 +1448,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = GET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:623:2: ( 'GET' | 'get' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:640:2: ( 'GET' | 'get' )
 			int alt27=2;
 			int LA27_0 = input.LA(1);
 			if ( (LA27_0=='G') ) {
@@ -1466,14 +1466,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt27) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:623:4: 'GET'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:640:4: 'GET'
 					{
 					match("GET"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:624:4: 'get'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:641:4: 'get'
 					{
 					match("get"); 
 
@@ -1495,7 +1495,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = STATUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:628:2: ( 'STATUS' | 'status' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:645:2: ( 'STATUS' | 'status' )
 			int alt28=2;
 			int LA28_0 = input.LA(1);
 			if ( (LA28_0=='S') ) {
@@ -1513,14 +1513,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt28) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:628:4: 'STATUS'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:645:4: 'STATUS'
 					{
 					match("STATUS"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:629:4: 'status'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:646:4: 'status'
 					{
 					match("status"); 
 
@@ -1542,7 +1542,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = STOP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:633:2: ( 'STOP' | 'stop' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:650:2: ( 'STOP' | 'stop' )
 			int alt29=2;
 			int LA29_0 = input.LA(1);
 			if ( (LA29_0=='S') ) {
@@ -1560,14 +1560,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt29) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:633:4: 'STOP'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:650:4: 'STOP'
 					{
 					match("STOP"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:634:4: 'stop'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:651:4: 'stop'
 					{
 					match("stop"); 
 
@@ -1589,7 +1589,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = DISPLAY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:638:2: ( 'DISPLAY' | 'display' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:655:2: ( 'DISPLAY' | 'display' )
 			int alt30=2;
 			int LA30_0 = input.LA(1);
 			if ( (LA30_0=='D') ) {
@@ -1607,14 +1607,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt30) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:638:4: 'DISPLAY'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:655:4: 'DISPLAY'
 					{
 					match("DISPLAY"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:639:4: 'display'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:656:4: 'display'
 					{
 					match("display"); 
 
@@ -1636,8 +1636,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = NEWLINE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:643:2: ( '\\n' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:643:4: '\\n'
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:660:2: ( '\\n' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:660:4: '\\n'
 			{
 			match('\n'); 
 			}
@@ -1656,7 +1656,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = SET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:647:2: ( 'SET' | 'set' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:664:2: ( 'SET' | 'set' )
 			int alt31=2;
 			int LA31_0 = input.LA(1);
 			if ( (LA31_0=='S') ) {
@@ -1674,14 +1674,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt31) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:647:4: 'SET'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:664:4: 'SET'
 					{
 					match("SET"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:648:4: 'set'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:665:4: 'set'
 					{
 					match("set"); 
 
@@ -1703,7 +1703,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = INDEX;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:652:2: ( 'INDEX' | 'index' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:669:2: ( 'INDEX' | 'index' )
 			int alt32=2;
 			int LA32_0 = input.LA(1);
 			if ( (LA32_0=='I') ) {
@@ -1721,14 +1721,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt32) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:652:4: 'INDEX'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:669:4: 'INDEX'
 					{
 					match("INDEX"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:653:4: 'index'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:670:4: 'index'
 					{
 					match("index"); 
 
@@ -1750,7 +1750,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = ON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:657:2: ( 'ON' | 'on' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:674:2: ( 'ON' | 'on' )
 			int alt33=2;
 			int LA33_0 = input.LA(1);
 			if ( (LA33_0=='O') ) {
@@ -1768,14 +1768,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt33) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:657:4: 'ON'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:674:4: 'ON'
 					{
 					match("ON"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:658:4: 'on'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:675:4: 'on'
 					{
 					match("on"); 
 
@@ -1797,7 +1797,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = TABLE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:662:2: ( 'TABLE' | 'table' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:679:2: ( 'TABLE' | 'table' )
 			int alt34=2;
 			int LA34_0 = input.LA(1);
 			if ( (LA34_0=='T') ) {
@@ -1815,14 +1815,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt34) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:662:4: 'TABLE'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:679:4: 'TABLE'
 					{
 					match("TABLE"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:663:4: 'table'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:680:4: 'table'
 					{
 					match("table"); 
 
@@ -1844,7 +1844,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = ALTER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:667:2: ( 'ALTER' | 'alter' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:684:2: ( 'ALTER' | 'alter' )
 			int alt35=2;
 			int LA35_0 = input.LA(1);
 			if ( (LA35_0=='A') ) {
@@ -1862,14 +1862,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt35) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:667:4: 'ALTER'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:684:4: 'ALTER'
 					{
 					match("ALTER"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:668:4: 'alter'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:685:4: 'alter'
 					{
 					match("alter"); 
 
@@ -1891,7 +1891,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = ADD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:672:2: ( 'ADD' | 'add' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:689:2: ( 'ADD' | 'add' )
 			int alt36=2;
 			int LA36_0 = input.LA(1);
 			if ( (LA36_0=='A') ) {
@@ -1909,14 +1909,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt36) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:672:4: 'ADD'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:689:4: 'ADD'
 					{
 					match("ADD"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:673:4: 'add'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:690:4: 'add'
 					{
 					match("add"); 
 
@@ -1938,7 +1938,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = CONSTRAINT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:677:2: ( 'CONSTRAINT' | 'constraint' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:694:2: ( 'CONSTRAINT' | 'constraint' )
 			int alt37=2;
 			int LA37_0 = input.LA(1);
 			if ( (LA37_0=='C') ) {
@@ -1956,14 +1956,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt37) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:677:4: 'CONSTRAINT'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:694:4: 'CONSTRAINT'
 					{
 					match("CONSTRAINT"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:678:4: 'constraint'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:695:4: 'constraint'
 					{
 					match("constraint"); 
 
@@ -1985,7 +1985,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = FOREIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:682:2: ( 'FOREIGN' | 'foreign' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:699:2: ( 'FOREIGN' | 'foreign' )
 			int alt38=2;
 			int LA38_0 = input.LA(1);
 			if ( (LA38_0=='F') ) {
@@ -2003,14 +2003,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt38) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:682:4: 'FOREIGN'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:699:4: 'FOREIGN'
 					{
 					match("FOREIGN"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:683:4: 'foreign'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:700:4: 'foreign'
 					{
 					match("foreign"); 
 
@@ -2032,7 +2032,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = KEY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:687:2: ( 'KEY' | 'key' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:704:2: ( 'KEY' | 'key' )
 			int alt39=2;
 			int LA39_0 = input.LA(1);
 			if ( (LA39_0=='K') ) {
@@ -2050,14 +2050,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt39) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:687:4: 'KEY'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:704:4: 'KEY'
 					{
 					match("KEY"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:688:4: 'key'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:705:4: 'key'
 					{
 					match("key"); 
 
@@ -2079,7 +2079,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = REFERENCES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:692:2: ( 'REFERENCES' | 'references' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:709:2: ( 'REFERENCES' | 'references' )
 			int alt40=2;
 			int LA40_0 = input.LA(1);
 			if ( (LA40_0=='R') ) {
@@ -2097,14 +2097,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt40) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:692:4: 'REFERENCES'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:709:4: 'REFERENCES'
 					{
 					match("REFERENCES"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:693:4: 'references'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:710:4: 'references'
 					{
 					match("references"); 
 
@@ -2126,7 +2126,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = AS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:697:2: ( 'AS' | 'as' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:714:2: ( 'AS' | 'as' )
 			int alt41=2;
 			int LA41_0 = input.LA(1);
 			if ( (LA41_0=='A') ) {
@@ -2144,14 +2144,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt41) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:697:4: 'AS'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:714:4: 'AS'
 					{
 					match("AS"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:698:4: 'as'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:715:4: 'as'
 					{
 					match("as"); 
 
@@ -2173,7 +2173,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = INTEGER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:702:2: ( 'INTEGER' | 'integer' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:719:2: ( 'INTEGER' | 'integer' )
 			int alt42=2;
 			int LA42_0 = input.LA(1);
 			if ( (LA42_0=='I') ) {
@@ -2191,14 +2191,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt42) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:702:4: 'INTEGER'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:719:4: 'INTEGER'
 					{
 					match("INTEGER"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:703:4: 'integer'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:720:4: 'integer'
 					{
 					match("integer"); 
 
@@ -2220,7 +2220,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = DECIMAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:707:2: ( 'DECIMAL' | 'decimal' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:724:2: ( 'DECIMAL' | 'decimal' )
 			int alt43=2;
 			int LA43_0 = input.LA(1);
 			if ( (LA43_0=='D') ) {
@@ -2238,14 +2238,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt43) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:707:4: 'DECIMAL'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:724:4: 'DECIMAL'
 					{
 					match("DECIMAL"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:708:4: 'decimal'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:725:4: 'decimal'
 					{
 					match("decimal"); 
 
@@ -2267,8 +2267,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = LEFT_PAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:712:2: ( '(' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:712:4: '('
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:729:2: ( '(' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:729:4: '('
 			{
 			match('('); 
 			}
@@ -2287,8 +2287,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = COLON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:716:2: ( ',' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:716:4: ','
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:733:2: ( ',' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:733:4: ','
 			{
 			match(','); 
 			}
@@ -2307,8 +2307,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = RIGHT_PAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:720:2: ( ')' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:720:4: ')'
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:737:2: ( ')' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:737:4: ')'
 			{
 			match(')'); 
 			}
@@ -2327,7 +2327,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = CHARACTER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:724:2: ( 'CHAR' | 'char' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:741:2: ( 'CHAR' | 'char' )
 			int alt44=2;
 			int LA44_0 = input.LA(1);
 			if ( (LA44_0=='C') ) {
@@ -2345,14 +2345,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt44) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:724:4: 'CHAR'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:741:4: 'CHAR'
 					{
 					match("CHAR"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:725:4: 'char'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:742:4: 'char'
 					{
 					match("char"); 
 
@@ -2374,7 +2374,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = VARCHAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:729:2: ( 'VARCHAR' | 'varchar' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:746:2: ( 'VARCHAR' | 'varchar' )
 			int alt45=2;
 			int LA45_0 = input.LA(1);
 			if ( (LA45_0=='V') ) {
@@ -2392,14 +2392,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt45) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:729:4: 'VARCHAR'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:746:4: 'VARCHAR'
 					{
 					match("VARCHAR"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:730:4: 'varchar'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:747:4: 'varchar'
 					{
 					match("varchar"); 
 
@@ -2421,7 +2421,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = DATETIME;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:734:2: ( 'DATETIME' | 'datetime' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:751:2: ( 'DATETIME' | 'datetime' )
 			int alt46=2;
 			int LA46_0 = input.LA(1);
 			if ( (LA46_0=='D') ) {
@@ -2439,14 +2439,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt46) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:734:4: 'DATETIME'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:751:4: 'DATETIME'
 					{
 					match("DATETIME"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:735:4: 'datetime'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:752:4: 'datetime'
 					{
 					match("datetime"); 
 
@@ -2468,7 +2468,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = NULL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:739:2: ( 'NULL' | 'null' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:756:2: ( 'NULL' | 'null' )
 			int alt47=2;
 			int LA47_0 = input.LA(1);
 			if ( (LA47_0=='N') ) {
@@ -2486,14 +2486,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt47) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:739:4: 'NULL'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:756:4: 'NULL'
 					{
 					match("NULL"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:740:4: 'null'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:757:4: 'null'
 					{
 					match("null"); 
 
@@ -2515,7 +2515,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:744:2: ( 'NOT' | 'not' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:761:2: ( 'NOT' | 'not' )
 			int alt48=2;
 			int LA48_0 = input.LA(1);
 			if ( (LA48_0=='N') ) {
@@ -2533,14 +2533,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt48) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:744:4: 'NOT'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:761:4: 'NOT'
 					{
 					match("NOT"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:745:4: 'not'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:762:4: 'not'
 					{
 					match("not"); 
 
@@ -2562,7 +2562,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = PRIMARY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:749:2: ( 'PRIMARY' | 'primary' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:766:2: ( 'PRIMARY' | 'primary' )
 			int alt49=2;
 			int LA49_0 = input.LA(1);
 			if ( (LA49_0=='P') ) {
@@ -2580,14 +2580,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt49) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:749:4: 'PRIMARY'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:766:4: 'PRIMARY'
 					{
 					match("PRIMARY"); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:750:4: 'primary'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:767:4: 'primary'
 					{
 					match("primary"); 
 
@@ -2609,8 +2609,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:753:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:753:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:770:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:770:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -2620,7 +2620,7 @@ public class urSQLLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:753:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:770:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop50:
 			while (true) {
 				int alt50=2;
@@ -2665,10 +2665,10 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:756:5: ( ( '0' .. '9' )+ )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:756:7: ( '0' .. '9' )+
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:773:5: ( ( '0' .. '9' )+ )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:773:7: ( '0' .. '9' )+
 			{
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:756:7: ( '0' .. '9' )+
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:773:7: ( '0' .. '9' )+
 			int cnt51=0;
 			loop51:
 			while (true) {
@@ -2717,14 +2717,14 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:760:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:777:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
 			int alt58=3;
 			alt58 = dfa58.predict(input);
 			switch (alt58) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:760:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:777:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
 					{
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:760:9: ( '0' .. '9' )+
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:777:9: ( '0' .. '9' )+
 					int cnt52=0;
 					loop52:
 					while (true) {
@@ -2758,7 +2758,7 @@ public class urSQLLexer extends Lexer {
 					}
 
 					match('.'); 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:760:25: ( '0' .. '9' )*
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:777:25: ( '0' .. '9' )*
 					loop53:
 					while (true) {
 						int alt53=2;
@@ -2787,7 +2787,7 @@ public class urSQLLexer extends Lexer {
 						}
 					}
 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:760:37: ( EXPONENT )?
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:777:37: ( EXPONENT )?
 					int alt54=2;
 					int LA54_0 = input.LA(1);
 					if ( (LA54_0=='E'||LA54_0=='e') ) {
@@ -2795,7 +2795,7 @@ public class urSQLLexer extends Lexer {
 					}
 					switch (alt54) {
 						case 1 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:760:37: EXPONENT
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:777:37: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -2807,10 +2807,10 @@ public class urSQLLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:761:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
 					{
 					match('.'); 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:761:13: ( '0' .. '9' )+
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:13: ( '0' .. '9' )+
 					int cnt55=0;
 					loop55:
 					while (true) {
@@ -2843,7 +2843,7 @@ public class urSQLLexer extends Lexer {
 						cnt55++;
 					}
 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:761:25: ( EXPONENT )?
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:25: ( EXPONENT )?
 					int alt56=2;
 					int LA56_0 = input.LA(1);
 					if ( (LA56_0=='E'||LA56_0=='e') ) {
@@ -2851,7 +2851,7 @@ public class urSQLLexer extends Lexer {
 					}
 					switch (alt56) {
 						case 1 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:761:25: EXPONENT
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:25: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -2863,9 +2863,9 @@ public class urSQLLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:762:9: ( '0' .. '9' )+ EXPONENT
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:779:9: ( '0' .. '9' )+ EXPONENT
 					{
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:762:9: ( '0' .. '9' )+
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:779:9: ( '0' .. '9' )+
 					int cnt57=0;
 					loop57:
 					while (true) {
@@ -2918,7 +2918,7 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:766:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:783:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt62=2;
 			int LA62_0 = input.LA(1);
 			if ( (LA62_0=='/') ) {
@@ -2952,11 +2952,11 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt62) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:766:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:783:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:766:14: (~ ( '\\n' | '\\r' ) )*
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:783:14: (~ ( '\\n' | '\\r' ) )*
 					loop59:
 					while (true) {
 						int alt59=2;
@@ -2985,7 +2985,7 @@ public class urSQLLexer extends Lexer {
 						}
 					}
 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:766:28: ( '\\r' )?
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:783:28: ( '\\r' )?
 					int alt60=2;
 					int LA60_0 = input.LA(1);
 					if ( (LA60_0=='\r') ) {
@@ -2993,7 +2993,7 @@ public class urSQLLexer extends Lexer {
 					}
 					switch (alt60) {
 						case 1 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:766:28: '\\r'
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:783:28: '\\r'
 							{
 							match('\r'); 
 							}
@@ -3006,11 +3006,11 @@ public class urSQLLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:767:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:784:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:767:14: ( options {greedy=false; } : . )*
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:784:14: ( options {greedy=false; } : . )*
 					loop61:
 					while (true) {
 						int alt61=2;
@@ -3031,7 +3031,7 @@ public class urSQLLexer extends Lexer {
 
 						switch (alt61) {
 						case 1 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:767:42: .
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:784:42: .
 							{
 							matchAny(); 
 							}
@@ -3063,8 +3063,8 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:770:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:770:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:787:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:787:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -3091,11 +3091,11 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:795:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:795:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
 			{
 			match('\"'); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:795:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
 			loop63:
 			while (true) {
 				int alt63=3;
@@ -3109,14 +3109,14 @@ public class urSQLLexer extends Lexer {
 
 				switch (alt63) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:14: ESC_SEQ
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:795:14: ESC_SEQ
 					{
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:778:24: ~ ( '\\\\' | '\"' )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:795:24: ~ ( '\\\\' | '\"' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -3151,11 +3151,11 @@ public class urSQLLexer extends Lexer {
 		try {
 			int _type = CHAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:781:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:781:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:798:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:798:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
 			{
 			match('\''); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:781:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:798:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
 			int alt64=2;
 			int LA64_0 = input.LA(1);
 			if ( (LA64_0=='\\') ) {
@@ -3173,14 +3173,14 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt64) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:781:15: ESC_SEQ
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:798:15: ESC_SEQ
 					{
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:781:25: ~ ( '\\'' | '\\\\' )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:798:25: ~ ( '\\'' | '\\\\' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -3210,8 +3210,8 @@ public class urSQLLexer extends Lexer {
 	// $ANTLR start "EXPONENT"
 	public final void mEXPONENT() throws RecognitionException {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:786:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:786:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:803:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:803:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
 			if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
 				input.consume();
@@ -3221,7 +3221,7 @@ public class urSQLLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:786:22: ( '+' | '-' )?
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:803:22: ( '+' | '-' )?
 			int alt65=2;
 			int LA65_0 = input.LA(1);
 			if ( (LA65_0=='+'||LA65_0=='-') ) {
@@ -3244,7 +3244,7 @@ public class urSQLLexer extends Lexer {
 
 			}
 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:786:33: ( '0' .. '9' )+
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:803:33: ( '0' .. '9' )+
 			int cnt66=0;
 			loop66:
 			while (true) {
@@ -3289,7 +3289,7 @@ public class urSQLLexer extends Lexer {
 	// $ANTLR start "HEX_DIGIT"
 	public final void mHEX_DIGIT() throws RecognitionException {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:789:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:806:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
@@ -3312,7 +3312,7 @@ public class urSQLLexer extends Lexer {
 	// $ANTLR start "ESC_SEQ"
 	public final void mESC_SEQ() throws RecognitionException {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:793:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:810:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
 			int alt67=3;
 			int LA67_0 = input.LA(1);
 			if ( (LA67_0=='\\') ) {
@@ -3367,7 +3367,7 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt67) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:793:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:810:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 					{
 					match('\\'); 
 					if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -3381,14 +3381,14 @@ public class urSQLLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:794:9: UNICODE_ESC
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:811:9: UNICODE_ESC
 					{
 					mUNICODE_ESC(); 
 
 					}
 					break;
 				case 3 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:795:9: OCTAL_ESC
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:812:9: OCTAL_ESC
 					{
 					mOCTAL_ESC(); 
 
@@ -3406,7 +3406,7 @@ public class urSQLLexer extends Lexer {
 	// $ANTLR start "OCTAL_ESC"
 	public final void mOCTAL_ESC() throws RecognitionException {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:800:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:817:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt68=3;
 			int LA68_0 = input.LA(1);
 			if ( (LA68_0=='\\') ) {
@@ -3464,7 +3464,7 @@ public class urSQLLexer extends Lexer {
 
 			switch (alt68) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:800:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:817:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '3') ) {
@@ -3494,7 +3494,7 @@ public class urSQLLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:801:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:818:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -3516,7 +3516,7 @@ public class urSQLLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:802:9: '\\\\' ( '0' .. '7' )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:819:9: '\\\\' ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -3541,8 +3541,8 @@ public class urSQLLexer extends Lexer {
 	// $ANTLR start "UNICODE_ESC"
 	public final void mUNICODE_ESC() throws RecognitionException {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:807:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:807:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:824:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:824:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
 			{
 			match('\\'); 
 			match('u'); 
@@ -4089,7 +4089,7 @@ public class urSQLLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "759:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
+			return "776:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
 		}
 	}
 

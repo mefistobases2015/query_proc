@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g 2015-09-13 00:56:39
+// $ANTLR 3.5 /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g 2015-09-13 17:39:18
 
 	package query_processor;
 	import java.io.*;
@@ -148,7 +148,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "programa"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:34:1: programa : ( clp_commands | ddl_commands | dml_commands );
-	public final void programa()   {
+	public final void programa() throws  {
 		programa_stack.push(new programa_scope());
 
 			programa_stack.peek().type_null = new Vector<String>();
@@ -292,7 +292,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "dml_commands"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:65:1: dml_commands : ( ( select | update | delete | insert ) ( clp_commands | ddl_commands | dml_commands ) |);
-	public final void dml_commands()   {
+	public final void dml_commands() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:66:2: ( ( select | update | delete | insert ) ( clp_commands | ddl_commands | dml_commands ) |)
 			int alt4=2;
@@ -521,7 +521,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "select"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:75:1: select : SELECT ( ALL | col_list ) ( NEWLINE )? from ( NEWLINE )* ;
-	public final void select()   {
+	public final void select() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:76:2: ( SELECT ( ALL | col_list ) ( NEWLINE )? from ( NEWLINE )* )
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:76:4: SELECT ( ALL | col_list ) ( NEWLINE )? from ( NEWLINE )*
@@ -638,7 +638,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "col_list"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:96:1: col_list : ( ( ID | agg_funct ) col_list |);
-	public final void col_list()   {
+	public final void col_list() throws  {
 		Token ID1=null;
 
 		try {
@@ -729,7 +729,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "from"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:106:1: from : FROM ( ID | join_st ) ( NEWLINE )? ( where )? ( NEWLINE )? ( group )? ( NEWLINE )? ( for_JSON_XML )? ;
-	public final void from()   {
+	public final void from() throws  {
 		Token ID2=null;
 
 		try {
@@ -911,7 +911,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "join_st"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:111:1: join_st : table1= ID JOIN table2= ID join_st_aux ;
-	public final void join_st()   {
+	public final void join_st() throws  {
 		Token table1=null;
 		Token table2=null;
 
@@ -947,7 +947,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "join_st_aux"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:119:1: join_st_aux : ( JOIN ID join_st_aux |);
-	public final void join_st_aux()   {
+	public final void join_st_aux() throws  {
 		Token ID3=null;
 
 		try {
@@ -1002,7 +1002,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "where"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:124:1: where : WHERE where_st ;
-	public final void where()   {
+	public final void where() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:125:2: ( WHERE where_st )
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:125:4: WHERE where_st
@@ -1029,7 +1029,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "where_st"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:128:1: where_st : ( ID comp_op value[\"1\"] | ID null_op );
-	public final void where_st()   {
+	public final void where_st() throws  {
 		Token ID4=null;
 		Token ID5=null;
 
@@ -1110,7 +1110,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "comp_op"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:133:1: comp_op : ( GREATER_THAN | GREATER_EQUALS | LESS_THAN | LESS_EQUALS | EQUALS | LIKE | NOT );
-	public final void comp_op()   {
+	public final void comp_op() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:134:2: ( GREATER_THAN | GREATER_EQUALS | LESS_THAN | LESS_EQUALS | EQUALS | LIKE | NOT )
 			int alt19=7;
@@ -1222,7 +1222,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "null_op"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:143:1: null_op : IS ( NULL | NOT NULL ) ;
-	public final void null_op()   {
+	public final void null_op() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:144:2: ( IS ( NULL | NOT NULL ) )
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:144:4: IS ( NULL | NOT NULL )
@@ -1286,7 +1286,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "group"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:156:1: group : GROUP BY cols ;
-	public final void group()   {
+	public final void group() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:157:2: ( GROUP BY cols )
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:157:4: GROUP BY cols
@@ -1314,7 +1314,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "cols"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:160:1: cols : ( ID cols |);
-	public final void cols()   {
+	public final void cols() throws  {
 		Token ID6=null;
 
 		try {
@@ -1368,7 +1368,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "for_JSON_XML"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:165:1: for_JSON_XML : FOR ( JSON | XML ) ;
-	public final void for_JSON_XML()   {
+	public final void for_JSON_XML() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:166:2: ( FOR ( JSON | XML ) )
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:166:4: FOR ( JSON | XML )
@@ -1425,7 +1425,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "agg_funct"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:170:1: agg_funct : ( COUNT | AVERAGE | MIN | MAX ) LEFT_PAR ID RIGHT_PAR ;
-	public final void agg_funct()   {
+	public final void agg_funct() throws  {
 		Token ID7=null;
 
 		try {
@@ -1513,7 +1513,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "update"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:178:1: update : UPDATE table= ID ( NEWLINE )? SET column= ID EQUALS value[\"2\"] ( NEWLINE )? where ( NEWLINE )* ;
-	public final void update()   {
+	public final void update() throws  {
 		Token table=null;
 		Token column=null;
 
@@ -1613,7 +1613,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "delete"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:190:1: delete : DELETE ( NEWLINE )? FROM ID ( NEWLINE )? where ( NEWLINE )* ;
-	public final void delete()   {
+	public final void delete() throws  {
 		Token ID8=null;
 
 		try {
@@ -1705,7 +1705,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "insert"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:201:1: insert : INSERT INTO ID LEFT_PAR cols RIGHT_PAR ( NEWLINE )? VALUES LEFT_PAR values RIGHT_PAR ( NEWLINE )* ;
-	public final void insert()   {
+	public final void insert() throws  {
 		Token ID9=null;
 
 		try {
@@ -1796,7 +1796,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "values"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:218:1: values : ( value[\"0\"] values |);
-	public final void values()   {
+	public final void values() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:219:2: ( value[\"0\"] values |)
 			int alt32=2;
@@ -1850,7 +1850,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "value"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:223:1: value[String sel] : ( INT | FLOAT | ID );
-	public final void value(String sel)   {
+	public final void value(String sel) throws  {
 		Token INT10=null;
 		Token FLOAT11=null;
 		Token ID12=null;
@@ -1930,7 +1930,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "ddl_commands"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:245:1: ddl_commands : ( ( set_db | create_index | drop_table | alter_table | create_table ) ( ddl_commands | dml_commands | clp_commands ) |);
-	public final void ddl_commands()   {
+	public final void ddl_commands() throws  {
 		try {
 			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:246:2: ( ( set_db | create_index | drop_table | alter_table | create_table ) ( ddl_commands | dml_commands | clp_commands ) |)
 			int alt36=2;
@@ -2187,7 +2187,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "set_db"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:257:1: set_db : SET DATABASE ID ( NEWLINE )* ;
-	public final void set_db()   {
+	public final void set_db() throws  {
 		Token ID13=null;
 
 		try {
@@ -2240,7 +2240,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "create_index"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:265:1: create_index : CREATE INDEX index= ID ON ( NEWLINE )? table= ID LEFT_PAR column= ID RIGHT_PAR ( NEWLINE )* ;
-	public final void create_index()   {
+	public final void create_index() throws  {
 		Token index=null;
 		Token table=null;
 		Token column=null;
@@ -2318,7 +2318,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "drop_table"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:276:1: drop_table : DROP TABLE ID ( NEWLINE )* ;
-	public final void drop_table()   {
+	public final void drop_table() throws  {
 		Token ID14=null;
 
 		try {
@@ -2371,7 +2371,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "alter_table"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:284:1: alter_table : ALTER TABLE ID ( NEWLINE )? ADD CONSTRAINT const_def[$ID.text] ( NEWLINE )* ;
-	public final void alter_table()   {
+	public final void alter_table() throws  {
 		Token ID15=null;
 
 		try {
@@ -2442,7 +2442,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "const_def"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:288:1: const_def[String table] : FOREIGN KEY LEFT_PAR column= ID RIGHT_PAR ( NEWLINE )? REFERENCES r_table= ID LEFT_PAR r_column= ID RIGHT_PAR ;
-	public final void const_def(String table)   {
+	public final void const_def(String table) throws  {
 		Token column=null;
 		Token r_table=null;
 		Token r_column=null;
@@ -2498,7 +2498,7 @@ public class urSQLParser extends Parser {
 
 	// $ANTLR start "create_table"
 	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:297:1: create_table : CREATE TABLE ID AS LEFT_PAR ( NEWLINE )? col_def p_key RIGHT_PAR ( NEWLINE )* ;
-	public final void create_table()   {
+	public final void create_table() throws  {
 		Token ID16=null;
 
 		try {
@@ -2560,7 +2560,7 @@ public class urSQLParser extends Parser {
 
 				 	Collections.reverse(programa_stack.peek().column);
 				 	int j = 0;
-				 	for(int k = 0; k < programa_stack.peek().type_null.size(); k += 4) {
+				 	for (int k = 0; k < programa_stack.peek().type_null.size(); k += 4) {
 				 		Vector<String> v = new Vector<String>();
 				 		v.add(programa_stack.peek().column.get(j));
 				 		v.add(programa_stack.peek().type_null.get(k));
@@ -2570,12 +2570,29 @@ public class urSQLParser extends Parser {
 				 		programa_stack.peek().columns.add(v);
 				 		j++;
 				 	}
-				 	System.out.println("Table: " + (ID16!=null?ID16.getText():null));
-				 	System.out.println("Columns:");
-				 	for(int i = 0; i < programa_stack.peek().columns.size(); i++) {
-				 		System.out.println(programa_stack.peek().columns.get(i));
+					boolean pk = false;
+					boolean pk_exists = false;
+					for (int i = 0; i < programa_stack.peek().columns.size(); i++) {
+						Vector<String> v = programa_stack.peek().columns.get(i);
+						if (v.get(0).equals(programa_stack.peek().tmp)) {
+							pk_exists = true;
+							if (v.get(4).equals("1")) {
+								pk = true;
+							}
+						}
+					}
+					if (!pk_exists) {
+						System.out.println("Error: Primary key is not a valid column");
+					} else if (pk) {
+						System.out.println("Error: Primary key can't be null");
+					} else {
+				 		System.out.println("Table: " + (ID16!=null?ID16.getText():null));
+				 		System.out.println("Columns:");
+				 		for(int i = 0; i < programa_stack.peek().columns.size(); i++) {
+				 			System.out.println(programa_stack.peek().columns.get(i));
+				 		}
+				 		System.out.println("Primary key: " + programa_stack.peek().tmp);
 				 	}
-				 	System.out.println("Primary key: " + programa_stack.peek().tmp);
 				 	programa_stack.peek().column.clear();
 				 	programa_stack.peek().type_null.clear();
 				 	programa_stack.peek().columns.clear();
@@ -2596,12 +2613,12 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "col_def"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:325:1: col_def : ( ID type null_cons ( NEWLINE )? col_def |);
-	public final void col_def()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:342:1: col_def : ( ID type null_cons ( NEWLINE )? col_def |);
+	public final void col_def() throws  {
 		Token ID17=null;
 
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:326:2: ( ID type null_cons ( NEWLINE )? col_def |)
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:343:2: ( ID type null_cons ( NEWLINE )? col_def |)
 			int alt47=2;
 			int LA47_0 = input.LA(1);
 			if ( (LA47_0==ID) ) {
@@ -2619,7 +2636,7 @@ public class urSQLParser extends Parser {
 
 			switch (alt47) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:326:4: ID type null_cons ( NEWLINE )? col_def
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:343:4: ID type null_cons ( NEWLINE )? col_def
 					{
 					ID17=(Token)match(input,ID,FOLLOW_ID_in_col_def1009); 
 					pushFollow(FOLLOW_type_in_col_def1011);
@@ -2630,7 +2647,7 @@ public class urSQLParser extends Parser {
 					null_cons();
 					state._fsp--;
 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:326:22: ( NEWLINE )?
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:343:22: ( NEWLINE )?
 					int alt46=2;
 					int LA46_0 = input.LA(1);
 					if ( (LA46_0==NEWLINE) ) {
@@ -2638,7 +2655,7 @@ public class urSQLParser extends Parser {
 					}
 					switch (alt46) {
 						case 1 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:326:22: NEWLINE
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:343:22: NEWLINE
 							{
 							match(input,NEWLINE,FOLLOW_NEWLINE_in_col_def1015); 
 							}
@@ -2660,7 +2677,7 @@ public class urSQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:335:2: 
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:352:2: 
 					{
 					}
 					break;
@@ -2680,8 +2697,8 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "type"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:338:1: type : ( INTEGER | DECIMAL LEFT_PAR digits= INT COLON decimals= INT RIGHT_PAR | CHARACTER LEFT_PAR INT RIGHT_PAR | VARCHAR | DATETIME );
-	public final void type()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:355:1: type : ( INTEGER | DECIMAL LEFT_PAR digits= INT COLON decimals= INT RIGHT_PAR | CHARACTER LEFT_PAR INT RIGHT_PAR | VARCHAR | DATETIME );
+	public final void type() throws  {
 		Token digits=null;
 		Token decimals=null;
 		Token INTEGER18=null;
@@ -2692,7 +2709,7 @@ public class urSQLParser extends Parser {
 		Token DATETIME23=null;
 
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:339:2: ( INTEGER | DECIMAL LEFT_PAR digits= INT COLON decimals= INT RIGHT_PAR | CHARACTER LEFT_PAR INT RIGHT_PAR | VARCHAR | DATETIME )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:356:2: ( INTEGER | DECIMAL LEFT_PAR digits= INT COLON decimals= INT RIGHT_PAR | CHARACTER LEFT_PAR INT RIGHT_PAR | VARCHAR | DATETIME )
 			int alt48=5;
 			switch ( input.LA(1) ) {
 			case INTEGER:
@@ -2727,7 +2744,7 @@ public class urSQLParser extends Parser {
 			}
 			switch (alt48) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:339:4: INTEGER
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:356:4: INTEGER
 					{
 					INTEGER18=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_type1042); 
 					 
@@ -2739,7 +2756,7 @@ public class urSQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:346:4: DECIMAL LEFT_PAR digits= INT COLON decimals= INT RIGHT_PAR
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:363:4: DECIMAL LEFT_PAR digits= INT COLON decimals= INT RIGHT_PAR
 					{
 					DECIMAL19=(Token)match(input,DECIMAL,FOLLOW_DECIMAL_in_type1052); 
 					match(input,LEFT_PAR,FOLLOW_LEFT_PAR_in_type1054); 
@@ -2756,7 +2773,7 @@ public class urSQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:353:4: CHARACTER LEFT_PAR INT RIGHT_PAR
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:370:4: CHARACTER LEFT_PAR INT RIGHT_PAR
 					{
 					CHARACTER21=(Token)match(input,CHARACTER,FOLLOW_CHARACTER_in_type1080); 
 					match(input,LEFT_PAR,FOLLOW_LEFT_PAR_in_type1082); 
@@ -2771,7 +2788,7 @@ public class urSQLParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:360:4: VARCHAR
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:377:4: VARCHAR
 					{
 					VARCHAR22=(Token)match(input,VARCHAR,FOLLOW_VARCHAR_in_type1096); 
 					 
@@ -2783,7 +2800,7 @@ public class urSQLParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:367:4: DATETIME
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:384:4: DATETIME
 					{
 					DATETIME23=(Token)match(input,DATETIME,FOLLOW_DATETIME_in_type1106); 
 					 
@@ -2810,10 +2827,10 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "null_cons"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:377:1: null_cons : ( NULL | NOT NULL );
-	public final void null_cons()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:394:1: null_cons : ( NULL | NOT NULL );
+	public final void null_cons() throws  {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:378:2: ( NULL | NOT NULL )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:395:2: ( NULL | NOT NULL )
 			int alt49=2;
 			int LA49_0 = input.LA(1);
 			if ( (LA49_0==NULL) ) {
@@ -2831,7 +2848,7 @@ public class urSQLParser extends Parser {
 
 			switch (alt49) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:378:4: NULL
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:395:4: NULL
 					{
 					match(input,NULL,FOLLOW_NULL_in_null_cons1126); 
 					 
@@ -2841,7 +2858,7 @@ public class urSQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:383:4: NOT NULL
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:400:4: NOT NULL
 					{
 					match(input,NOT,FOLLOW_NOT_in_null_cons1136); 
 					match(input,NULL,FOLLOW_NULL_in_null_cons1138); 
@@ -2867,20 +2884,20 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "p_key"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:391:1: p_key : PRIMARY KEY LEFT_PAR ID RIGHT_PAR ( NEWLINE )? ;
-	public final void p_key()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:408:1: p_key : PRIMARY KEY LEFT_PAR ID RIGHT_PAR ( NEWLINE )? ;
+	public final void p_key() throws  {
 		Token ID24=null;
 
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:392:2: ( PRIMARY KEY LEFT_PAR ID RIGHT_PAR ( NEWLINE )? )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:392:4: PRIMARY KEY LEFT_PAR ID RIGHT_PAR ( NEWLINE )?
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:409:2: ( PRIMARY KEY LEFT_PAR ID RIGHT_PAR ( NEWLINE )? )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:409:4: PRIMARY KEY LEFT_PAR ID RIGHT_PAR ( NEWLINE )?
 			{
 			match(input,PRIMARY,FOLLOW_PRIMARY_in_p_key1158); 
 			match(input,KEY,FOLLOW_KEY_in_p_key1160); 
 			match(input,LEFT_PAR,FOLLOW_LEFT_PAR_in_p_key1162); 
 			ID24=(Token)match(input,ID,FOLLOW_ID_in_p_key1164); 
 			match(input,RIGHT_PAR,FOLLOW_RIGHT_PAR_in_p_key1166); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:392:38: ( NEWLINE )?
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:409:38: ( NEWLINE )?
 			int alt50=2;
 			int LA50_0 = input.LA(1);
 			if ( (LA50_0==NEWLINE) ) {
@@ -2888,7 +2905,7 @@ public class urSQLParser extends Parser {
 			}
 			switch (alt50) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:392:38: NEWLINE
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:409:38: NEWLINE
 					{
 					match(input,NEWLINE,FOLLOW_NEWLINE_in_p_key1168); 
 					}
@@ -2915,10 +2932,10 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "clp_commands"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:399:1: clp_commands : ( ( create_db | drop_db | list_db | start | get_status | stop | display_db ) ( clp_commands | dml_commands | ddl_commands ) |);
-	public final void clp_commands()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:416:1: clp_commands : ( ( create_db | drop_db | list_db | start | get_status | stop | display_db ) ( clp_commands | dml_commands | ddl_commands ) |);
+	public final void clp_commands() throws  {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:400:2: ( ( create_db | drop_db | list_db | start | get_status | stop | display_db ) ( clp_commands | dml_commands | ddl_commands ) |)
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:417:2: ( ( create_db | drop_db | list_db | start | get_status | stop | display_db ) ( clp_commands | dml_commands | ddl_commands ) |)
 			int alt53=2;
 			int LA53_0 = input.LA(1);
 			if ( (LA53_0==CREATE||(LA53_0 >= DISPLAY && LA53_0 <= DROP)||LA53_0==GET||LA53_0==LIST||LA53_0==START||LA53_0==STOP) ) {
@@ -2936,9 +2953,9 @@ public class urSQLParser extends Parser {
 
 			switch (alt53) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:400:4: ( create_db | drop_db | list_db | start | get_status | stop | display_db ) ( clp_commands | dml_commands | ddl_commands )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:417:4: ( create_db | drop_db | list_db | start | get_status | stop | display_db ) ( clp_commands | dml_commands | ddl_commands )
 					{
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:400:4: ( create_db | drop_db | list_db | start | get_status | stop | display_db )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:417:4: ( create_db | drop_db | list_db | start | get_status | stop | display_db )
 					int alt51=7;
 					switch ( input.LA(1) ) {
 					case CREATE:
@@ -2983,7 +3000,7 @@ public class urSQLParser extends Parser {
 					}
 					switch (alt51) {
 						case 1 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:400:6: create_db
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:417:6: create_db
 							{
 							pushFollow(FOLLOW_create_db_in_clp_commands1189);
 							create_db();
@@ -2992,7 +3009,7 @@ public class urSQLParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:401:4: drop_db
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:418:4: drop_db
 							{
 							pushFollow(FOLLOW_drop_db_in_clp_commands1194);
 							drop_db();
@@ -3001,7 +3018,7 @@ public class urSQLParser extends Parser {
 							}
 							break;
 						case 3 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:402:4: list_db
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:419:4: list_db
 							{
 							pushFollow(FOLLOW_list_db_in_clp_commands1199);
 							list_db();
@@ -3010,7 +3027,7 @@ public class urSQLParser extends Parser {
 							}
 							break;
 						case 4 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:403:4: start
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:420:4: start
 							{
 							pushFollow(FOLLOW_start_in_clp_commands1204);
 							start();
@@ -3019,7 +3036,7 @@ public class urSQLParser extends Parser {
 							}
 							break;
 						case 5 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:404:4: get_status
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:421:4: get_status
 							{
 							pushFollow(FOLLOW_get_status_in_clp_commands1209);
 							get_status();
@@ -3028,7 +3045,7 @@ public class urSQLParser extends Parser {
 							}
 							break;
 						case 6 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:405:4: stop
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:422:4: stop
 							{
 							pushFollow(FOLLOW_stop_in_clp_commands1214);
 							stop();
@@ -3037,7 +3054,7 @@ public class urSQLParser extends Parser {
 							}
 							break;
 						case 7 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:406:4: display_db
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:423:4: display_db
 							{
 							pushFollow(FOLLOW_display_db_in_clp_commands1219);
 							display_db();
@@ -3048,7 +3065,7 @@ public class urSQLParser extends Parser {
 
 					}
 
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:406:17: ( clp_commands | dml_commands | ddl_commands )
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:423:17: ( clp_commands | dml_commands | ddl_commands )
 					int alt52=3;
 					switch ( input.LA(1) ) {
 					case CREATE:
@@ -3134,7 +3151,7 @@ public class urSQLParser extends Parser {
 					}
 					switch (alt52) {
 						case 1 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:406:19: clp_commands
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:423:19: clp_commands
 							{
 							pushFollow(FOLLOW_clp_commands_in_clp_commands1225);
 							clp_commands();
@@ -3143,7 +3160,7 @@ public class urSQLParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:407:4: dml_commands
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:424:4: dml_commands
 							{
 							pushFollow(FOLLOW_dml_commands_in_clp_commands1230);
 							dml_commands();
@@ -3152,7 +3169,7 @@ public class urSQLParser extends Parser {
 							}
 							break;
 						case 3 :
-							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:408:4: ddl_commands
+							// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:425:4: ddl_commands
 							{
 							pushFollow(FOLLOW_ddl_commands_in_clp_commands1235);
 							ddl_commands();
@@ -3166,7 +3183,7 @@ public class urSQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:410:2: 
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:427:2: 
 					{
 					}
 					break;
@@ -3186,18 +3203,18 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "create_db"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:413:1: create_db : CREATE DATABASE ID ( NEWLINE )* ;
-	public final void create_db()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:430:1: create_db : CREATE DATABASE ID ( NEWLINE )* ;
+	public final void create_db() throws  {
 		Token ID25=null;
 
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:414:2: ( CREATE DATABASE ID ( NEWLINE )* )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:414:4: CREATE DATABASE ID ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:431:2: ( CREATE DATABASE ID ( NEWLINE )* )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:431:4: CREATE DATABASE ID ( NEWLINE )*
 			{
 			match(input,CREATE,FOLLOW_CREATE_in_create_db1256); 
 			match(input,DATABASE,FOLLOW_DATABASE_in_create_db1258); 
 			ID25=(Token)match(input,ID,FOLLOW_ID_in_create_db1260); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:414:23: ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:431:23: ( NEWLINE )*
 			loop54:
 			while (true) {
 				int alt54=2;
@@ -3208,7 +3225,7 @@ public class urSQLParser extends Parser {
 
 				switch (alt54) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:414:23: NEWLINE
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:431:23: NEWLINE
 					{
 					match(input,NEWLINE,FOLLOW_NEWLINE_in_create_db1262); 
 					}
@@ -3239,18 +3256,18 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "drop_db"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:421:1: drop_db : DROP DATABASE ID ( NEWLINE )* ;
-	public final void drop_db()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:438:1: drop_db : DROP DATABASE ID ( NEWLINE )* ;
+	public final void drop_db() throws  {
 		Token ID26=null;
 
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:422:2: ( DROP DATABASE ID ( NEWLINE )* )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:422:4: DROP DATABASE ID ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:439:2: ( DROP DATABASE ID ( NEWLINE )* )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:439:4: DROP DATABASE ID ( NEWLINE )*
 			{
 			match(input,DROP,FOLLOW_DROP_in_drop_db1283); 
 			match(input,DATABASE,FOLLOW_DATABASE_in_drop_db1285); 
 			ID26=(Token)match(input,ID,FOLLOW_ID_in_drop_db1287); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:422:21: ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:439:21: ( NEWLINE )*
 			loop55:
 			while (true) {
 				int alt55=2;
@@ -3261,7 +3278,7 @@ public class urSQLParser extends Parser {
 
 				switch (alt55) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:422:21: NEWLINE
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:439:21: NEWLINE
 					{
 					match(input,NEWLINE,FOLLOW_NEWLINE_in_drop_db1289); 
 					}
@@ -3292,15 +3309,15 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "list_db"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:429:1: list_db : LIST DATABASES ( NEWLINE )* ;
-	public final void list_db()  {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:446:1: list_db : LIST DATABASES ( NEWLINE )* ;
+	public final void list_db() throws  {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:430:2: ( LIST DATABASES ( NEWLINE )* )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:430:4: LIST DATABASES ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:447:2: ( LIST DATABASES ( NEWLINE )* )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:447:4: LIST DATABASES ( NEWLINE )*
 			{
 			match(input,LIST,FOLLOW_LIST_in_list_db1310); 
 			match(input,DATABASES,FOLLOW_DATABASES_in_list_db1312); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:430:19: ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:447:19: ( NEWLINE )*
 			loop56:
 			while (true) {
 				int alt56=2;
@@ -3311,7 +3328,7 @@ public class urSQLParser extends Parser {
 
 				switch (alt56) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:430:19: NEWLINE
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:447:19: NEWLINE
 					{
 					match(input,NEWLINE,FOLLOW_NEWLINE_in_list_db1314); 
 					}
@@ -3342,14 +3359,14 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "start"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:437:1: start : START ( NEWLINE )* ;
-	public final void start()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:454:1: start : START ( NEWLINE )* ;
+	public final void start() throws  {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:438:2: ( START ( NEWLINE )* )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:438:4: START ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:455:2: ( START ( NEWLINE )* )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:455:4: START ( NEWLINE )*
 			{
 			match(input,START,FOLLOW_START_in_start1335); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:438:10: ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:455:10: ( NEWLINE )*
 			loop57:
 			while (true) {
 				int alt57=2;
@@ -3360,7 +3377,7 @@ public class urSQLParser extends Parser {
 
 				switch (alt57) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:438:10: NEWLINE
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:455:10: NEWLINE
 					{
 					match(input,NEWLINE,FOLLOW_NEWLINE_in_start1337); 
 					}
@@ -3391,15 +3408,15 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "get_status"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:445:1: get_status : GET STATUS ( NEWLINE )* ;
-	public final void get_status()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:462:1: get_status : GET STATUS ( NEWLINE )* ;
+	public final void get_status() throws  {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:446:2: ( GET STATUS ( NEWLINE )* )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:446:4: GET STATUS ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:463:2: ( GET STATUS ( NEWLINE )* )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:463:4: GET STATUS ( NEWLINE )*
 			{
 			match(input,GET,FOLLOW_GET_in_get_status1358); 
 			match(input,STATUS,FOLLOW_STATUS_in_get_status1360); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:446:15: ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:463:15: ( NEWLINE )*
 			loop58:
 			while (true) {
 				int alt58=2;
@@ -3410,7 +3427,7 @@ public class urSQLParser extends Parser {
 
 				switch (alt58) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:446:15: NEWLINE
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:463:15: NEWLINE
 					{
 					match(input,NEWLINE,FOLLOW_NEWLINE_in_get_status1362); 
 					}
@@ -3441,14 +3458,14 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "stop"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:453:1: stop : STOP ( NEWLINE )* ;
-	public final void stop()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:470:1: stop : STOP ( NEWLINE )* ;
+	public final void stop() throws  {
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:454:2: ( STOP ( NEWLINE )* )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:454:4: STOP ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:471:2: ( STOP ( NEWLINE )* )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:471:4: STOP ( NEWLINE )*
 			{
 			match(input,STOP,FOLLOW_STOP_in_stop1383); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:454:9: ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:471:9: ( NEWLINE )*
 			loop59:
 			while (true) {
 				int alt59=2;
@@ -3459,7 +3476,7 @@ public class urSQLParser extends Parser {
 
 				switch (alt59) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:454:9: NEWLINE
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:471:9: NEWLINE
 					{
 					match(input,NEWLINE,FOLLOW_NEWLINE_in_stop1385); 
 					}
@@ -3490,18 +3507,18 @@ public class urSQLParser extends Parser {
 
 
 	// $ANTLR start "display_db"
-	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:461:1: display_db : DISPLAY DATABASE ID ( NEWLINE )* ;
-	public final void display_db()   {
+	// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:478:1: display_db : DISPLAY DATABASE ID ( NEWLINE )* ;
+	public final void display_db() throws  {
 		Token ID27=null;
 
 		try {
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:462:2: ( DISPLAY DATABASE ID ( NEWLINE )* )
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:462:4: DISPLAY DATABASE ID ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:479:2: ( DISPLAY DATABASE ID ( NEWLINE )* )
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:479:4: DISPLAY DATABASE ID ( NEWLINE )*
 			{
 			match(input,DISPLAY,FOLLOW_DISPLAY_in_display_db1406); 
 			match(input,DATABASE,FOLLOW_DATABASE_in_display_db1408); 
 			ID27=(Token)match(input,ID,FOLLOW_ID_in_display_db1410); 
-			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:462:24: ( NEWLINE )*
+			// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:479:24: ( NEWLINE )*
 			loop60:
 			while (true) {
 				int alt60=2;
@@ -3512,7 +3529,7 @@ public class urSQLParser extends Parser {
 
 				switch (alt60) {
 				case 1 :
-					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:462:24: NEWLINE
+					// /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g:479:24: NEWLINE
 					{
 					match(input,NEWLINE,FOLLOW_NEWLINE_in_display_db1412); 
 					}
