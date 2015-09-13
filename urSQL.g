@@ -10,6 +10,8 @@ options { language = Java; }
 @header {
 	package query_processor;
 	import java.io.*;
+	import java.util.Vector;
+	import java.util.Collections;
 }
 
 @members {
@@ -30,6 +32,30 @@ options { language = Java; }
 
 /* Inicio del programa */
 programa
+
+scope {
+	Vector<String> type_null;
+	Vector<String> column;
+	Vector<String> values;
+	Vector<String> condition;
+	Vector<String> select_columns;
+	Vector<String> select_tables;
+	Vector<String> select_group;
+	Vector<Vector<String>> columns;
+	String tmp;
+}
+
+@init {
+	$programa::type_null = new Vector<String>();
+	$programa::column = new Vector<String>();
+	$programa::values = new Vector<String>();
+	$programa::condition = new Vector<String>();
+	$programa::select_columns = new Vector<String>();
+	$programa::select_tables = new Vector<String>();
+	$programa::select_group = new Vector<String>();
+	$programa::columns = new Vector<Vector<String>>();
+	$programa::tmp = "";
+}
 	: clp_commands
 	| ddl_commands
 	| dml_commands
@@ -47,24 +73,51 @@ dml_commands
 	;
 	
 select
-	: SELECT ( ALL | col_list ) NEWLINE? from NEWLINE*
+	: SELECT ( ALL { $programa::select_columns.add("69"); }
+	| col_list ) NEWLINE? from NEWLINE*
+	{
+		if (!$programa::tmp.equals("0") && !$programa::tmp.equals("1")) {
+			$programa::tmp = "-1";
+		}
+		System.out.println("Select query...");
+		System.out.print("Columns: ");
+		System.out.println($programa::select_columns);
+		System.out.print("Tables: ");
+		System.out.println($programa::select_tables);
+		System.out.print("Condition: ");
+		System.out.println($programa::condition);
+		System.out.print("Grouping by: ");
+		System.out.println($programa::column);
+		System.out.print("XML/JSON: ");
+		System.out.println($programa::tmp);
+	}
 	;
 	
 col_list
-	: ( ID | agg_funct ) col_list
+	: ( ID 
+	 { 
+	 	$programa::select_columns.add("-1"); 
+	 	$programa::select_columns.add($ID.text);
+	 } 
+	| agg_funct ) col_list
 	| /* ε */
 	;
 	
 from
-	: FROM ( ID | join_st ) NEWLINE? where? NEWLINE? group? NEWLINE? for_JSON_XML?
+	: FROM ( ID { $programa::select_tables.add($ID.text); }
+	| join_st ) NEWLINE? where? NEWLINE? group? NEWLINE? for_JSON_XML?
 	;
 	
 join_st
-	: ID JOIN ID join_st_aux
+	: table1 = ID JOIN table2 = ID join_st_aux
+	 {
+	 	$programa::select_tables.add($table1.text);
+	 	$programa::select_tables.add($table2.text);
+	 }
 	;
 	
 join_st_aux
-	: JOIN ID join_st_aux
+	: JOIN ID join_st_aux { $programa::select_tables.add($ID.text); }
 	| /* ε */
 	;
 	
@@ -73,22 +126,31 @@ where
 	;
 	
 where_st
-	: ID comp_op value
-	| ID null_op
+	: ID comp_op value["1"] { $programa::condition.add($ID.text); }
+	| ID null_op { $programa::condition.add($ID.text); }
 	;
 	
 comp_op
-	: GREATER_THAN
-	| GREATER_EQUALS
-	| LESS_THAN
-	| LESS_EQUALS
-	| EQUALS
-	| LIKE
-	| NOT
+	: GREATER_THAN { $programa::condition.add("2"); }
+	| GREATER_EQUALS { $programa::condition.add("3"); }
+	| LESS_THAN { $programa::condition.add("4"); }
+	| LESS_EQUALS { $programa::condition.add("5"); }
+	| EQUALS { $programa::condition.add("6"); }
+	| LIKE { $programa::condition.add("7"); }
+	| NOT { $programa::condition.add("8"); }
 	;
 	
 null_op
-	: IS ( NULL | NOT NULL )
+	: IS ( NULL 
+	 { 
+	 	$programa::condition.add("1");
+	 	$programa::condition.add("-1");
+	 } 
+	| NOT NULL  
+	 { 
+	 	$programa::condition.add("0");
+	 	$programa::condition.add("-1");
+	 } )
 	;
 	
 group
@@ -96,39 +158,87 @@ group
 	;
 	
 cols
-	: ID cols
+	: ID cols { $programa::column.add($ID.text); }
 	|
 	;
 	
 for_JSON_XML
-	: FOR ( JSON | XML )
+	: FOR ( JSON { $programa::tmp = "0"; }
+	| XML { $programa::tmp = "1"; } )
 	;
 	
 agg_funct
-	: ( COUNT | AVERAGE | MIN | MAX ) LEFT_PAR ID RIGHT_PAR
+	: ( COUNT { $programa::select_columns.add("0");  }
+	| AVERAGE { $programa::select_columns.add("1");  }
+	| MIN { $programa::select_columns.add("2");  }
+	| MAX { $programa::select_columns.add("3");  } ) 
+	LEFT_PAR ID { $programa::select_columns.add($ID.text);  } RIGHT_PAR
 	;
 	
 update
-	: UPDATE ID NEWLINE? SET ID EQUALS value NEWLINE? where NEWLINE*
+	: UPDATE table = ID NEWLINE? SET column = ID EQUALS value["2"] NEWLINE? where NEWLINE*
+	 {
+	 	System.out.println("Updating column " + $column.text + " from table " + $table.text + "...");
+	 	System.out.println("New value: " + $programa::tmp);
+	 	System.out.println("Condition:");
+	 	System.out.println($programa::condition);
+	 	$programa::condition.clear();
+	 	$programa::values.clear();
+	 }
 	;
 	
 delete
 	: DELETE NEWLINE? FROM ID NEWLINE? where NEWLINE*
+	 {
+	 	System.out.println("Delete from table " + $ID.text);
+	 	System.out.print("Condition: ");
+	 	System.out.println($programa::condition);
+	 	$programa::condition.clear();
+	 	$programa::values.clear();
+	 }
 	;
 	
 insert
 	: INSERT INTO ID LEFT_PAR cols RIGHT_PAR NEWLINE? VALUES LEFT_PAR values RIGHT_PAR NEWLINE*
+	 {
+	 	System.out.println("Insert into table " + $ID.text);
+	 	if ($programa::column.size() != $programa::values.size()) {
+	 		System.out.println("Error: Mismatch between columns and values");
+	 	} else {
+	 		System.out.print("Columns: ");
+	 		System.out.println($programa::column);
+	 		System.out.print("Values: ");
+	 		System.out.println($programa::values);
+	 	}
+	 	$programa::column.clear();
+	 	$programa::values.clear();
+	 }
 	;
 	
 values
-	: value values
+	: value["0"] values
 	|
 	;
 	
-value
-	: INT
-	| FLOAT
-	| ID
+value [String sel]
+	: INT 
+	 { 
+	 	if (sel.equals("0")) { $programa::values.add($INT.text); }
+	 	else if (sel.equals("1")) { $programa::condition.add($INT.text); }
+	 	else { $programa::tmp = $INT.text; }
+	 }
+	| FLOAT 
+	 { 
+	 	if (sel.equals("0")) { $programa::values.add($FLOAT.text); }
+	 	else if (sel.equals("1")) { $programa::condition.add($FLOAT.text); }
+	 	else { $programa::tmp = $FLOAT.text; }
+	 }
+	| ID 
+	 { 
+	 	if (sel.equals("0")) { $programa::values.add($ID.text); }
+	 	else if (sel.equals("1")) { $programa::condition.add($ID.text); }
+	 	else { $programa::tmp = $ID.text; }
+	 }
 	;
 	
 /* Comandos DDL */ 
@@ -145,57 +255,144 @@ ddl_commands
 	
 /* Fija el esquema actual */	
 set_db
-	: SET DATABASE ID NEWLINE*
+	: SET DATABASE ID NEWLINE* {System.out.println("Setting " + $ID.text + " as current database...");}
+	 {
+	 	// Fijar el esquema actual
+	 }
 	;
 
 /* Crea un índice sobre una columna distinta a la llave primaria */	
 create_index
-	: CREATE INDEX ID ON NEWLINE? ID LEFT_PAR ID RIGHT_PAR NEWLINE*
+	: CREATE INDEX index = ID ON NEWLINE? table = ID LEFT_PAR column = ID RIGHT_PAR NEWLINE* 
+	 {
+	 	System.out.println("Creating index " + $index.text + " on column " + $column.text + " from table " + $table.text 
+	 	+ "...");
+	 	
+	 	// Crear índice
+	 }
 	;
 
 /* Elimina una tabla */	
 drop_table
-	: DROP TABLE ID NEWLINE*
+	: DROP TABLE ID NEWLINE* {System.out.println("Deleting table " + $ID.text + "...");}
+	 {
+	 	// Eliminar tabla
+	 }
 	;
 	
 /* Establece integridad referencial sobre una columna */	
 alter_table
-	: ALTER TABLE ID NEWLINE? ADD CONSTRAINT const_def NEWLINE*
+	: ALTER TABLE ID NEWLINE? ADD CONSTRAINT const_def[$ID.text] NEWLINE*
 	;
 	
-const_def
-	: FOREIGN KEY LEFT_PAR ID RIGHT_PAR NEWLINE? REFERENCES ID LEFT_PAR ID RIGHT_PAR
+const_def [String table]
+	: FOREIGN KEY LEFT_PAR column = ID RIGHT_PAR NEWLINE? REFERENCES r_table = ID LEFT_PAR r_column = ID RIGHT_PAR
+	 {
+	 	System.out.println("Column " + $column.text + " from table " + table + " references column " +
+	 	$r_column.text + " from table " + $r_table.text);
+	 }
 	;
 	
 /* Crea una tabla */	
 create_table
 	: CREATE TABLE ID AS LEFT_PAR NEWLINE? col_def p_key RIGHT_PAR NEWLINE*
+	 {
+	 	Collections.reverse($programa::column);
+	 	int j = 0;
+	 	for(int k = 0; k < $programa::type_null.size(); k += 4) {
+	 		Vector<String> v = new Vector<String>();
+	 		v.add($programa::column.get(j));
+	 		v.add($programa::type_null.get(k));
+	 		v.add($programa::type_null.get(k + 1));
+	 		v.add($programa::type_null.get(k + 2));
+	 		v.add($programa::type_null.get(k + 3));
+	 		$programa::columns.add(v);
+	 		j++;
+	 	}
+	 	System.out.println("Table: " + $ID.text);
+	 	System.out.println("Columns:");
+	 	for(int i = 0; i < $programa::columns.size(); i++) {
+	 		System.out.println($programa::columns.get(i));
+	 	}
+	 	System.out.println("Primary key: " + $programa::tmp);
+	 	$programa::column.clear();
+	 	$programa::type_null.clear();
+	 	$programa::columns.clear();
+	 }
 	;
 	
 /* Definición de columnas */	
 col_def
 	: ID type null_cons NEWLINE? col_def
+	 {
+	 	//$programa::columns.add($programa::column);
+	 	//$programa::column.clear();
+	 	//$programa::column.add($ID.text);
+	 	//System.out.println($ID.text);
+	 	$programa::column.add($ID.text);
+	 }
 	| /* ε */
 	;
 	
 /* Tipos de datos */	
 type
-	: INTEGER
-	| DECIMAL LEFT_PAR INT COLON INT RIGHT_PAR
-	| CHARACTER LEFT_PAR INT RIGHT_PAR
-	| VARCHAR
-	| DATETIME
+	: INTEGER 
+	 { 
+	 	$programa::type_null.add("0");
+	 	$programa::type_null.add("-1");
+	 	$programa::type_null.add("-1");
+	 	//System.out.println($INTEGER.text);
+	 }
+	| DECIMAL LEFT_PAR digits = INT COLON decimals = INT RIGHT_PAR 
+	 { 
+	 	$programa::type_null.add("1");
+	 	$programa::type_null.add($digits.text);
+	 	$programa::type_null.add($decimals.text);
+	 	//System.out.println($DECIMAL.text);
+	 }
+	| CHARACTER LEFT_PAR INT RIGHT_PAR 
+	 { 
+	 	$programa::type_null.add("2");
+	 	$programa::type_null.add($INT.text);
+	 	$programa::type_null.add("-1");
+	 	//System.out.println($CHARACTER.text);
+	 }
+	| VARCHAR 
+	 { 
+	 	$programa::type_null.add("3");
+	 	$programa::type_null.add("-1");
+	 	$programa::type_null.add("-1");
+	 	//System.out.println($VARCHAR.text);
+	 }
+	| DATETIME 
+	 { 
+	 	$programa::type_null.add("4"); 
+	 	$programa::type_null.add("-1");
+	 	$programa::type_null.add("-1");
+	 	//System.out.println($DATETIME.text);
+	 }
 	;
 	
 /* Restricción de NULL */	
 null_cons
-	: NULL
-	| NOT NULL
+	: NULL 
+	 { 
+	 	$programa::type_null.add("1");
+	 	//System.out.println("NULL");
+	 }
+	| NOT NULL 
+	 { 
+	 	$programa::type_null.add("0");
+	 	//System.out.println("NOT NULL");
+	 }
 	;
 	
 /* Llave primaria */	
 p_key
 	: PRIMARY KEY LEFT_PAR ID RIGHT_PAR NEWLINE?
+	 {
+	 	$programa::tmp = $ID.text;
+	 }
 	;
 
 /* Comandos CLP */ 
@@ -215,36 +412,57 @@ clp_commands
 /* Crear un nuevo esquema */	
 create_db
 	: CREATE DATABASE ID NEWLINE* {System.out.println("Creating database " + $ID.text + "...\n");}
+	 {
+	 	// Crear base de datos
+	 }
 	;
 
 /* Eliminar un esquema */	
 drop_db
 	: DROP DATABASE ID NEWLINE* {System.out.println("Deleting database " + $ID.text + "...\n");}
+	 {
+	 	// Eliminar base de datos
+	 }
 	;
 
 /* Muestra los esquemas existentes */	
 list_db
 	: LIST DATABASES NEWLINE* {System.out.println("Listing databases...\n");}
+	 {
+	 	// Mostrar las bases de datos que hay
+	 }
 	;
 
 /* Inicia los procesos */	
 start
 	: START NEWLINE* {System.out.println("Starting processes...\n");}
+	 {
+	 	// Iniciar los procesos
+	 }
 	;
 
 /* Obtiene el estado del motor */	
 get_status
 	: GET STATUS NEWLINE* {System.out.println("Obtaining status...\n");}
+	 {
+	 	// Obtener el estado de los procesos
+	 }
 	;
 
 /* Detiene los procesos */	
 stop
 	: STOP NEWLINE* {System.out.println("Stoping processes...\n");}
+	 {
+	 	// Detener los procesos
+	 }
 	;
 
 /* Muestra el esquema seleccionado */	
 display_db
 	: DISPLAY DATABASE ID NEWLINE* {System.out.println("Displaying database " + $ID.text + "...\n");}
+	 {
+	 	// Mostrar la base de datos indicada
+	 }
 	;
 	
 SELECT
