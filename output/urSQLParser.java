@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g 2015-09-13 17:39:18
+// $ANTLR 3.5 /home/hector/Dropbox/TEC/Bases de Datos/Proyecto 1/urSQL.g 2015-09-13 22:05:03
 
 	package query_processor;
 	import java.io.*;
